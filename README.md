@@ -5,19 +5,30 @@
 ### Dependencies
 - account
 
-### Installation
-ดูรายละเอียดใน [INSTALL.md](INSTALL.md)
+### Documentation
+- Installation: [installation_guide.md](docs/installation_guide.md)
+- Uninstallation: [uninstallation_guide.md](docs/uninstallation_guide.md)
+- Update/Changelog: [update_guide.md](docs/update_guide.md)
+- Usage: [usage_guide.md](docs/usage_guide.md)
+- Configuration: [configuration_guide.md](docs/configuration_guide.md)
+- Troubleshooting: [troubleshooting.md](docs/troubleshooting.md)
 
 ### Usage (สรุป)
 1. ไปที่ Vendor Bills
 2. เปิดบิลที่มีการ Register Payment และ reconcile แล้ว
 3. ระบบจะแสดงฟิลด์ `Payment Number` เป็นรายการเลขที่ Payment (คั่นด้วยเครื่องหมาย ,)
 
-### Task Summary (รายการที่ทำในงานนี้)
-- ตรวจสอบโครงสร้างโมดูลและข้อมูลใน `__manifest__.py`
-- เพิ่มคู่มือการใช้งาน/ติดตั้ง: `README.md`, `INSTALL.md`
-- ปรับแพ็กเกจสำหรับปล่อยงานให้เป็นโมดูลเดียว (1 module) และจัดโครงสร้าง zip ให้ถูกต้อง
-- อัปโหลดซอร์สขึ้น GitHub repository
+### Value (คุณค่าต่อธุรกิจ/การใช้งาน)
+- ลดเวลาตรวจสอบการจ่ายเงินของ Vendor Bills (เห็นเลข Payment ที่ reconcile ได้ทันที)
+- ช่วยลดความผิดพลาดจากการอ้างอิงเลขเอกสารผิด และช่วย trace การจ่ายในงานบัญชี
+
+### Scope (ขอบเขตการเปลี่ยนแปลง)
+- เป็นโมดูลเสริมเพียง 1 โมดูล ไม่แก้ไขโค้ดของโมดูลหลัก `account`
+- สามารถติดตั้ง/ถอนการติดตั้งได้โดยไม่กระทบโมดูลหลัก (ยกเว้นการแสดงผลฟิลด์/วิวที่เพิ่มเข้ามา)
+
+### Known Limitations
+- แสดงเลข Payment ตาม `name` ของเอกสาร Payment และขึ้นกับการ reconcile
+- หากใช้งาน flow การจ่ายที่ไม่ทำ reconcile กับ Vendor Bill โดยตรง อาจไม่แสดงค่า
 
 ### Credits
 

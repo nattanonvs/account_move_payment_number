@@ -1,13 +1,13 @@
 {
     'name': 'Vendor Bill Payment Number',
     'summary': "Show reconciled payment numbers on Vendor Bills",
-    'version': '15.0.1.0.1',
+    'version': '15.0.1.1.0',
     'description': """
         This module adds a computed field to Vendor Bills (account.move)
         that displays the Payment Number(s) reconciled with the bill.
         Useful for accounting visibility and reporting.
     """,
-    'author': 'The Auto-Info Co., Ltd.',
+    'author': 'Nattanai Vinyangkoon, The Auto-Info Co., Ltd.',
     'company': 'The Auto-Info Co., Ltd.',
     'website': '',
     'category': 'Accounting',
